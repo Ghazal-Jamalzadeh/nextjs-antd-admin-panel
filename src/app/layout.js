@@ -59,7 +59,7 @@ export default function RootLayout({children}) {
                     >
                         <Content style={{
                             padding : '16px' ,
-                            minHeight : 'clac(100vh - 64px)' ,
+                            minHeight : 'calc(100vh - 64px)' ,
                         }}>
                         {children}
 
