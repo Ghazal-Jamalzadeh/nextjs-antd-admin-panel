@@ -1,8 +1,13 @@
-import React from 'react';
+"use client" ;
+import React, {useEffect} from 'react';
 import {Menu} from "antd";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 function AppSideMenu() {
+
+    const pathName = usePathname()
+    const [selectedKey, setSelectedKey] = React.useState();
 
     const menuItems = [
         {
@@ -42,8 +47,32 @@ function AppSideMenu() {
         } ,
     ]
 
+    useEffect( ()=>{
+        if(pathName.startsWith('/bookmarks')){
+            setSelectedKey("2")
+        }else if(pathName.startsWith('/courses')){
+            setSelectedKey("3")
+        }else if(pathName.startsWith('/tutorials')){
+            setSelectedKey("4")
+        }else if(pathName.startsWith('/bestPractices')){
+            setSelectedKey("5")
+        }else if(pathName.startsWith('/certifications')){
+            setSelectedKey("6")
+        }else if(pathName.startsWith('/resources')){
+            setSelectedKey("6")
+        }else if(pathName.startsWith('/bookmarks')){
+            setSelectedKey("7")
+        }else if(pathName.startsWith('/events')){
+            setSelectedKey("8")
+        }else if(pathName.startsWith('/community')){
+            setSelectedKey("9")
+        }else if(pathName === '/'){
+            setSelectedKey('1')
+        }
+    } , [pathName])
+
     return (
-        <Menu mode='inline' items={menuItems}></Menu>
+        <Menu mode='inline' items={menuItems} selectedKeys = {selectedKey}></Menu>
     )
 }
 
