@@ -1,5 +1,19 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## Create Commands 
+https://www.youtube.com/watch?v=FVNaFLU6LyY
+```angular2html
+npx create-next-app@14
+```
+
+```angular2html
+npm install antd --save 
+```
+
+
+
+
 ## Getting Started
 
 First, run the development server:
