@@ -8,7 +8,8 @@ npx create-next-app@14
 ```
 
 ```angular2html
-npm install antd --save 
+npm install antd --save
+npm install @ant-design/nextjs-registry --save
 ```
 
 
